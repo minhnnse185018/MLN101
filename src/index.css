@@ -160,6 +160,11 @@ a:hover {
   box-shadow: 0 8px 24px rgba(139, 106, 0, 0.15);
 }
 
+.card-no-hover:hover {
+  transform: none;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
 /* Animation Utilities */
 .fade-in {
   opacity: 0;
