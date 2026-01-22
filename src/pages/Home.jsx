@@ -22,7 +22,7 @@ export default function Home() {
                 textAlign: 'center',
                 position: 'relative',
                 overflow: 'hidden',
-                background: 'radial-gradient(ellipse at center, rgba(201, 58, 58, 0.15) 0%, var(--bg-primary) 70%)'
+                background: 'linear-gradient(135deg, #FFF3C4 0%, #FFF8E1 50%, #FFFFFF 100%)'
             }}>
                 <div className="container" style={{ 
                     opacity: Math.max(0, 1 - scrollY / 500),
@@ -45,7 +45,8 @@ export default function Home() {
                         marginBottom: '2rem', 
                         lineHeight: '1.3',
                         fontWeight: '700',
-                        textShadow: '0 4px 20px rgba(201, 58, 58, 0.3)',
+                        color: 'var(--text-accent)',
+                        textShadow: '0 2px 12px rgba(139, 106, 0, 0.1)',
                         animation: 'fadeInUp 1s ease-out 0.2s backwards'
                     }}>
                         "Không phải ý thức con người <br />
@@ -58,20 +59,40 @@ export default function Home() {
                     </h1>
                     <p className="hero-subtitle" style={{ 
                         fontSize: '1.1rem', 
-                        maxWidth: '700px', 
-                        margin: '0 auto 3rem', 
+                        maxWidth: '800px', 
+                        margin: '0 auto 2rem', 
                         color: 'var(--text-secondary)',
                         lineHeight: '1.8',
                         animation: 'fadeInUp 1.2s ease-out 0.4s backwards'
                     }}>
-                        Từ cái ăn đến tư tưởng – Khám phá mối quan hệ biện chứng giữa <br />
-                        <strong style={{ color: 'var(--primary)' }}>Cơ sở hạ tầng</strong> và <strong style={{ color: 'var(--secondary)' }}>Kiến trúc thượng tầng</strong> trong bối cảnh thế kỷ 21
+                        Học thuyết hình thái kinh tế – xã hội của chủ nghĩa Mác khẳng định:<br />
+                        <strong style={{ color: 'var(--secondary)' }}>Cơ sở hạ tầng (CSHT)</strong> giữ vai trò quyết định đối với <strong style={{ color: '#1976D2' }}>Kiến trúc thượng tầng (KTTT)</strong>,<br />
+                        còn KTTT tác động ngược trở lại CSHT
                     </p>
+                    <div style={{
+                        maxWidth: '700px',
+                        margin: '0 auto 3rem',
+                        padding: '1.5rem',
+                        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                        borderRadius: 'var(--radius-lg)',
+                        border: '2px solid var(--border-color)',
+                        animation: 'fadeInUp 1.3s ease-out 0.5s backwards'
+                    }}>
+                        <p style={{ 
+                            fontSize: '0.95rem',
+                            color: 'var(--text-accent)',
+                            lineHeight: '1.7',
+                            marginBottom: 0,
+                            fontWeight: '500'
+                        }}>
+                            📖 Từ cái ăn đến tư tưởng – Khám phá mối quan hệ biện chứng trong bối cảnh thế kỷ 21
+                        </p>
+                    </div>
                     <Link to="/theory" className="btn btn-primary" style={{ 
                         padding: '1.2rem 2.5rem', 
                         fontSize: '1.1rem',
                         animation: 'fadeInUp 1.4s ease-out 0.6s backwards',
-                        boxShadow: '0 8px 24px rgba(201, 58, 58, 0.4)'
+                        boxShadow: '0 4px 16px rgba(139, 106, 0, 0.25)'
                     }}>
                         Khám phá mối quan hệ CSHT – KTTT <ArrowRight size={20} />
                     </Link>
@@ -146,14 +167,15 @@ export default function Home() {
                         <div 
                             className="card transformation-card" 
                             style={{ 
-                                borderColor: 'rgba(239, 68, 68, 0.3)',
+                                borderColor: '#E57373',
+                                borderLeft: '4px solid #E57373',
                                 transform: scrollY > 400 ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
                                 opacity: scrollY > 400 ? 1 : 0,
                                 transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
-                                background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, var(--bg-card) 100%)'
+                                background: 'linear-gradient(135deg, #FFEBEE 0%, var(--bg-card) 100%)'
                             }}
                         >
-                            <div style={{ color: '#ef4444', marginBottom: '1rem' }}>
+                            <div style={{ color: '#E57373', marginBottom: '1rem' }}>
                                 <AlertTriangle size={48} strokeWidth={1.5} />
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Thiếu Thốn Vật Chất</h3>
@@ -213,14 +235,15 @@ export default function Home() {
                         <div 
                             className="card transformation-card" 
                             style={{ 
-                                borderColor: 'rgba(16, 185, 129, 0.3)',
+                                borderColor: '#81C784',
+                                borderLeft: '4px solid #81C784',
                                 transform: scrollY > 600 ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
                                 opacity: scrollY > 600 ? 1 : 0,
                                 transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s',
-                                background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, var(--bg-card) 100%)'
+                                background: 'linear-gradient(135deg, #E8F5E9 0%, var(--bg-card) 100%)'
                             }}
                         >
-                            <div style={{ color: '#10b981', marginBottom: '1rem' }}>
+                            <div style={{ color: '#66BB6A', marginBottom: '1rem' }}>
                                 <TrendingUp size={48} strokeWidth={1.5} />
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Đời Sống Ổn Định</h3>

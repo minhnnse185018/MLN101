@@ -45,15 +45,16 @@ export default function Interaction() {
                                 style={{
                                     padding: '1rem',
                                     borderRadius: 'var(--radius-md)',
-                                    border: pollVote === option ? '1px solid var(--accent)' : '1px solid rgba(255,255,255,0.1)',
-                                    backgroundColor: pollVote === option ? 'rgba(245, 158, 11, 0.1)' : 'transparent',
-                                    color: pollVote === option ? 'var(--accent)' : 'var(--text-primary)',
+                                    border: pollVote === option ? '2px solid var(--primary)' : '1px solid var(--border-color)',
+                                    backgroundColor: pollVote === option ? '#FFF3C4' : 'var(--bg-secondary)',
+                                    color: pollVote === option ? 'var(--secondary)' : 'var(--text-primary)',
                                     cursor: 'pointer',
                                     textAlign: 'left',
                                     transition: 'all 0.2s ease',
                                     display: 'flex',
                                     justifyContent: 'space-between',
-                                    alignItems: 'center'
+                                    alignItems: 'center',
+                                    fontWeight: pollVote === option ? '600' : '400'
                                 }}
                             >
                                 {option}
@@ -61,7 +62,7 @@ export default function Interaction() {
                             </button>
                         ))}
                     </div>
-                    {pollVote && <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--accent)', fontStyle: 'italic' }}>Cảm ơn bạn đã bình chọn!</p>}
+                    {pollVote && <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--secondary)', fontStyle: 'italic', fontWeight: '600' }}>Cảm ơn bạn đã bình chọn!</p>}
                 </div>
 
                 {/* Discussion Section */}
@@ -78,7 +79,7 @@ export default function Interaction() {
                         paddingRight: '0.5rem'
                     }}>
                         {comments.map((comment) => (
-                            <div key={comment.id} style={{ marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                            <div key={comment.id} style={{ marginBottom: '1rem', paddingBottom: '1rem', borderBottom: '1px solid var(--border-color)' }}>
                                 <strong style={{ display: 'block', fontSize: '0.9rem', marginBottom: '0.25rem', color: 'var(--primary)' }}>{comment.name}</strong>
                                 <span style={{ fontSize: '0.95rem', color: 'var(--text-secondary)' }}>{comment.text}</span>
                             </div>
@@ -95,10 +96,11 @@ export default function Interaction() {
                                 flex: 1,
                                 padding: '0.75rem',
                                 borderRadius: 'var(--radius-md)',
-                                border: '1px solid rgba(255,255,255,0.1)',
+                                border: '1px solid var(--border-color)',
                                 backgroundColor: 'var(--bg-secondary)',
-                                color: 'white',
-                                outline: 'none'
+                                color: 'var(--text-primary)',
+                                outline: 'none',
+                                fontSize: '0.95rem'
                             }}
                         />
                         <button type="submit" className="btn btn-primary" style={{ padding: '0.75rem' }}>Gửi</button>
